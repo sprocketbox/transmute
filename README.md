@@ -17,13 +17,14 @@ multiple formats and types.
 - [Installing](#installing)
 - [Breakdown](#breakdown)
     - [Transmutations](#transmutations)
+    - [Metadata](#metadata)
+    - [Transmutable Objects](#transmutable-objects)
 - [Usage](#usage)
-    - [Finding](#finding)
-    - [Hydrating](#hydrating)
-    - [Belongs To](#belongsto)
-    - [Flushing](#flushing)
-- [How does it work](#how)
-- [Why?](#why)
+    - [Registering Transmutations](#registering-transmutations)
+    - [Transmuting Values](#transmuting-values)
+        - [Basic Transmuting](#basic-transmuting)
+        - [Transmuting Properties](#transmuting-properties)
+    - [Provided Transmutations](#provided-transmutations)
 
 ## Installing
 To install this package simply run the following command.
@@ -158,11 +159,11 @@ class StringTransmutation implements ReversibleTransmutation
 }
 ```
 
-### Transmuting values
+### Transmuting Values
 There are a number of ways to transmute values using the
 transmutor.
 
-#### Basic transmuting
+#### Basic Transmuting
 To transmute an object implementing one of the interfaces
 use the following:
 
@@ -199,7 +200,7 @@ named attributes:
 |`$default`|`mixed`|The default value if the transmutation returns nothing|
 |`$metadata`|`Metadata|array`|An array of metadata or a metadata object|
 
-#### Transmuting properties
+#### Transmuting Properties
 **NOTE**: This method caches information about the property,
 but will use reflection to retrieve this information in
 the first place.
@@ -250,7 +251,7 @@ The transmutable attribute accepts three arguments:
 Due to a limitation of PHP the metadata must be provided
 as an array here.
 
-### Provided transmutation
+### Provided Transmutations
 This package comes with a number of transmutations, each
 with their own nuances.
 
