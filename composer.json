@@ -1,0 +1,35 @@
+{
+  "name": "sprocketbox/transmute",
+  "description": "",
+  "type": "library",
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "suggest": {
+    "brick/money": "^0.5",
+    "nesbot/carbon": "^2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sprocketbox\\Transmute\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sprocketbox\\Transmute\\Tests\\": "tests/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ollie Read",
+      "email": "ollie@sprocketbox.io"
+    }
+  ],
+  "scripts": {
+    "test": "/vendor/bin/phpunit"
+  }
+}
